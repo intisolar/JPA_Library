@@ -22,7 +22,6 @@ public class DAO<T> {
     }
 
     protected void guardar(T objeto) {
-        System.out.println("Llega el objeto a mi método? " + objeto.toString());
         conectar();
         em.getTransaction().begin();
         em.persist(objeto);
